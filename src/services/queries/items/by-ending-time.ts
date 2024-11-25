@@ -9,7 +9,7 @@ export const itemsByEndingTime = async (
 ) => {
 
 	const ids = await client.zRange(itemsByEndingAtKey(),
-Date.now(),
+		Date.now(),
 		'+inf',
 		{ BY: 'SCORE', 
 			LIMIT: {
